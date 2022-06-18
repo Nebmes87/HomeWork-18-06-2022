@@ -22,3 +22,23 @@ while (number>0)
 }
 if (newNumber == OldNumber) System.Console.WriteLine($"{OldNumber} -> да");
 else System.Console.WriteLine($"{OldNumber} -> нет");
+
+// или 
+
+System.Console.Write("Введите число: ");
+string num = Console.ReadLine();
+int Newnum = num.Length;
+bool q = true;
+for (int i = 0; i <= Newnum / 2; i++)
+{
+    if (num[i] != num[Newnum - 1 - i])
+    {
+        System.Console.WriteLine($"{num} -> нет");
+        q = false;
+        break;
+    }
+}
+if (q == true)
+{
+    System.Console.WriteLine($"{num} -> да");
+}
